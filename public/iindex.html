@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+
+    <style>
+      body {
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+      }
+      canvas {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="350"> </canvas>
+    <input type="range" value="1" min="1" max="36" step="1" id="slider" />
+    <script>
+      alert(slider.value);
+      const d = document;
+      ($canvas = d.getElementById("canvas")), (ctx = $canvas.getContext("2d"));
+
+      ctx.fillStyle = "#f60066";
+      ctx.fillRect(30, 30, 300, 250);
+      ctx.strokeStyle = "#333";
+      ctx.lineWidth = 10;
+      ctx.strokeRect(40, 40, 300, 250);
+
+      ctx.lineWidth = 3;
+      ctx.lineTo(0, 10);
+      ctx.lineTo(20, 100);
+      ctx.stroke();
+    </script>
+  </body>
+</html>
