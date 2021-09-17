@@ -24,9 +24,8 @@ async function convertImage(format) {
   let photo = new Image();
   photo.src = await res;
   let $link = document.createElement("a");
-  // $link.download = "picture.png";
-  $link.href = photo.src;
-  $link.target = "_blank";
+   $link.download = "picture.png";
+  $link.href = photo.src; 
   $link.classList.add("clasico");
   $link.textContent = "Descargar imagen ahora mismo";
   document.body.prepend($link);
